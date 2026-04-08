@@ -4,16 +4,7 @@ All notable updates to CloudyBot are documented here.
 
 ---
 
-## [v1.8] — 2026-03-15
-### Added
-- WhatsApp task routing: send tasks directly from WhatsApp, get results back in the same thread
-- Improved memory for long multi-step tasks — context no longer drops after 10 steps
 
-### Improved
-- Cloud browser stability on sites with heavy JavaScript (SPAs, React apps)
-- LinkedIn automation speed improved by 40%
-
----
 
 ## [v1.7] — 2026-03-01
 ### Added
