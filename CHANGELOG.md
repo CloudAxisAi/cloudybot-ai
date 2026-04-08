@@ -13,7 +13,9 @@ All notable updates to CloudyBot are documented here.
 - Form-fill edge cases on sites with CAPTCHA challenges
 - Session timeout handling for long-running tasks
 
----## [v1.6] — 2026-02-15
+---
+
+## [v1.6] — 2026-02-15
 ### Added
 - Hard-cap pricing enforcement — monthly cap is now a hard block, not a soft warning
 - Task scheduling: set recurring tasks (daily, weekly, custom cron)
@@ -22,7 +24,9 @@ All notable updates to CloudyBot are documented here.
 - Web scraping accuracy on paginated results
 - Better error messages when a site blocks automated browsing
 
----## [v1.5] — 2026-02-01
+---
+
+## [v1.5] — 2026-02-01
 ### Added
 - Browser screenshot previews — see what CloudyBot is looking at mid-task
 - Export results to CSV directly from chat
@@ -31,27 +35,37 @@ All notable updates to CloudyBot are documented here.
 - LinkedIn rate limiting — added smart delays to avoid account flags
 - Memory leak in long sessions (5+ hours)
 
----## [v1.4] — 2026-01-15
+---
+
+## [v1.4] — 2026-01-15
 ### Added
 - Multi-step task chains: "First do X, then if Y do Z"
 - Slack notification support for task completions
 
----## [v1.3] — 2026-01-01
+---
+
+## [v1.3] — 2026-01-01
 ### Added
 - WhatsApp integration (beta)
 - Task history — review and re-run past tasks
 
----## [v1.2] — 2025-12-15
+---
+
+## [v1.2] — 2025-12-15
 ### Added
 - LinkedIn profile research mode
 - Batch processing: run the same task across a list of URLs
 
----## [v1.1] — 2025-12-01
+---
+
+## [v1.1] — 2025-12-01
 ### Added
 - Web research mode
 - Result formatting: table, bullet list, or paragraph
 
----## [v1.0] — 2025-11-15
+---
+
+## [v1.0] — 2025-11-15
 ### Initial Release
 - Cloud browser task execution
 - Chat interface
