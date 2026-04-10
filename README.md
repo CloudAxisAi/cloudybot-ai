@@ -57,7 +57,9 @@ No local install. No Puppeteer setup. No Playwright config. It just works.
 
 ## Free Resources in This Repo
 
-- **[50 Free LinkedIn Outreach Prompts](./prompts/linkedin-outreach-prompts.md)** — copy-paste ready
+- **[60 Free LinkedIn Outreach Prompts](./prompts/linkedin-outreach-prompts.md)** — copy-paste ready (incl. event-based & mutual-connection)
+- **[20 Competitor Research Prompts](./prompts/competitor-research-prompts.md)** — pricing, SEO, sentiment, positioning
+- **[20 Content Creation Prompts](./prompts/content-creation-prompts.md)** — blogs, social, newsletters, repurposing
 - **[AI Agent Comparison](./comparisons/ai-browser-automation-comparison.md)** — CloudyBot vs Browserbase vs Make vs Zapier
 - **[Real Use Case Examples](./examples/)** — step-by-step walkthroughs
 - **[Architecture Overview](./docs/architecture.md)** — how it's built under the hood

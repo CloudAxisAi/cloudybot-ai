@@ -1,4 +1,4 @@
-# 50 Free LinkedIn Outreach Prompts
+# 60 Free LinkedIn Outreach Prompts
 
 Copy-paste these directly into CloudyBot — or use them manually.
 
@@ -150,6 +150,42 @@ Give these directly to CloudyBot to run the entire workflow:
 
 ---
 
+## Event-Based Outreach
+
+Use after attending, hosting, or watching a conference, webinar, or community event.
+
+```
+51. Hi [Name], I caught your talk at [event name] on [topic] — one idea really stuck with me. Would love to connect.
+
+52. Hi [Name], we were both at [event] last week — I sat in on the [track/session] you were part of. Great to connect here.
+
+53. Hi [Name], I watched the [webinar title] replay and appreciated your comment on [topic]. Would love to stay in touch.
+
+54. Hi [Name], I'm following up after [event/community meetup]. You mentioned [specific point] — I'd enjoy comparing notes if you're open to connecting.
+
+55. Hi [Name], [Mutual contact] suggested I reach out — we were both at [event] and both care about [theme]. Would love to connect.
+```
+
+---
+
+## Mutual Connection Outreach
+
+Explicitly name the person you share in common (warmth beats vague "we should connect").
+
+```
+56. Hi [Name], [Mutual connection] and I were just talking about [topic] — they spoke highly of your work at [company]. Would love to connect.
+
+57. Hi [Name], I noticed we're both connected to [Mutual connection]. I'm exploring [problem space] and they thought your perspective would be valuable.
+
+58. Hi [Name], [Mutual connection] mentioned you're the go-to for [area] at [company]. I'm learning in that space — would be great to connect.
+
+59. Hi [Name], [Mutual connection] suggested I reach out — we're both building in [industry] and they thought we'd have a lot to swap notes on.
+
+60. Hi [Name], small world — [Mutual connection] and I worked together at [past company / context]. They said you'd be the right person to ask about [topic]. Open to connecting?
+```
+
+---
+
 ## How to Use With CloudyBot
 
 1. Go to [cloudybot.ai](https://cloudybot.ai)
@@ -158,3 +194,5 @@ Give these directly to CloudyBot to run the entire workflow:
 4. You review and send
 
 No manual browsing. No copy-pasting between tabs. Just results.
+
+> These prompts work best with an AI agent that can actually browse — [try CloudyBot free](https://cloudybot.ai).
