@@ -195,4 +195,6 @@ Explicitly name the person you share in common (warmth beats vague "we should co
 
 No manual browsing. No copy-pasting between tabs. Just results.
 
+**Further reading:** [CloudyBot review: the AI agent that actually does work](https://cloudybot.ai/blog/cloudybot-review-ai-agent-actually-does-work).
+
 > These prompts work best with an AI agent that can actually browse — [try CloudyBot free](https://cloudybot.ai).

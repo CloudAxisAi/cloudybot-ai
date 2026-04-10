@@ -74,4 +74,6 @@ Copy-paste into your AI assistant. For anything that needs **live web pages** (p
 
 ---
 
+**Further reading:** [CloudyBot review: the AI agent that actually does work](https://cloudybot.ai/blog/cloudybot-review-ai-agent-actually-does-work) — browser automation, schedules, and honest fit.
+
 > These prompts work best with an AI agent that can actually browse — [try CloudyBot free](https://cloudybot.ai).

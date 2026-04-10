@@ -68,4 +68,6 @@ Use with any capable LLM. When a prompt needs **fresh research, links, or on-sit
 
 ---
 
+**Further reading:** [CloudyBot review: the AI agent that actually does work](https://cloudybot.ai/blog/cloudybot-review-ai-agent-actually-does-work) — when chat-only tools are not enough.
+
 > These prompts work best with an AI agent that can actually browse — [try CloudyBot free](https://cloudybot.ai).
