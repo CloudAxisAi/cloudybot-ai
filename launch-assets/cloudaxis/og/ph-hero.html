@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: radial-gradient(ellipse 80% 70% at 20% 30%, rgba(20,184,166,0.18), transparent 60%),
+                radial-gradient(ellipse 60% 50% at 85% 70%, rgba(59,130,246,0.12), transparent 55%),
+                #06080d;
+    color: #f8fafc;
+    display: flex; align-items: center; padding: 56px 64px; gap: 48px;
+  }
+  .left { flex: 1.05; }
+  .badge {
+    display: inline-block; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #5eead4; margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 52px; line-height: 1.08; font-weight: 700; letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  h1 span { color: #2dd4bf; }
+  p {
+    font-size: 22px; line-height: 1.45; color: #94a3b8; max-width: 520px;
+  }
+  .url { margin-top: 28px; font-size: 20px; color: #14b8a6; font-weight: 600; }
+  .phone {
+    width: 300px; flex-shrink: 0;
+    background: #0f172a; border: 1px solid rgba(20,184,166,0.35);
+    border-radius: 28px; padding: 14px; box-shadow: 0 24px 80px rgba(0,0,0,0.55);
+  }
+  .phone-notch { width: 90px; height: 6px; background: #334155; border-radius: 99px; margin: 0 auto 12px; }
+  .wa {
+    background: #0b141a; border-radius: 18px; padding: 16px; min-height: 380px;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40V0h40' fill='none' stroke='%231e293b' stroke-width='1'/%3E%3C/svg%3E");
+  }
+  .wa-hdr { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #1e293b; }
+  .wa-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg,#14b8a6,#0ea5e9); }
+  .wa-name { font-size: 15px; font-weight: 600; }
+  .wa-sub { font-size: 11px; color: #64748b; }
+  .bubble {
+    max-width: 88%; background: #1f2c34; border-radius: 12px 12px 12px 4px;
+    padding: 12px 14px; font-size: 14px; line-height: 1.45; margin-bottom: 10px;
+  }
+  .bubble strong { color: #5eead4; }
+  .time { font-size: 10px; color: #64748b; text-align: right; margin-top: 4px; }
+  .logo {
+    position: absolute; top: 36px; right: 48px; display: flex; align-items: center; gap: 10px;
+    font-size: 22px; font-weight: 700;
+  }
+  .logo img { width: 36px; height: 36px; }
+</style>
+</head>
+<body>
+  <div class="logo">
+    <img src="../../../sites/cloudaxis/assets/cloudaxis-logo-mark.svg" alt="">
+    CloudAxis
+  </div>
+  <div class="left">
+    <div class="badge">Agentic Cloud OS</div>
+    <h1>Your agents' work is <span>already done</span></h1>
+    <p>Isolated cloud computer for AI agents — persistent desktop, real browser, scheduled runs.</p>
+    <div class="url">cloudaxis.ai</div>
+  </div>
+  <div class="phone">
+    <div class="phone-notch"></div>
+    <div class="wa">
+      <div class="wa-hdr">
+        <div class="wa-avatar"></div>
+        <div>
+          <div class="wa-name">CloudAxis</div>
+          <div class="wa-sub">7:43 AM</div>
+        </div>
+      </div>
+      <div class="bubble">
+        <strong>Morning brief ready.</strong><br>
+        3 competitor pricing changes overnight. Summary saved to Files + Excel. Review when you're up.
+        <div class="time">7:43 AM</div>
+      </div>
+      <div class="bubble">
+        Draft Poster finished 2 LinkedIn posts. Reviewer queued for 10:00.
+        <div class="time">7:44 AM</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

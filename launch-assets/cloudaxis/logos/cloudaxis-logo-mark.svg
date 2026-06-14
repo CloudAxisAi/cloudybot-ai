@@ -1,0 +1,51 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CloudAxis logo mark">
+  <defs>
+    <linearGradient id="ca-cloud-fill" x1="120" y1="150" x2="400" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14B8A6" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#0D9488" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="ca-cloud-stroke" x1="120" y1="150" x2="400" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2DD4BF"/>
+      <stop offset="1" stop-color="#0D9488"/>
+    </linearGradient>
+    <radialGradient id="ca-node-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5EEAD4" stop-opacity="0.85"/>
+      <stop offset="0.45" stop-color="#2DD4BF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="ca-cloud-clip">
+      <path transform="translate(106,106) scale(12.5)" d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.69 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+    </clipPath>
+  </defs>
+
+  <path transform="translate(106,106) scale(12.5)" d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.69 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" fill="url(#ca-cloud-fill)"/>
+
+  <g clip-path="url(#ca-cloud-clip)" stroke="#2DD4BF" stroke-opacity="0.28" stroke-width="1.5">
+    <line x1="181" y1="120" x2="181" y2="392"/>
+    <line x1="331" y1="120" x2="331" y2="392"/>
+    <line x1="120" y1="206" x2="392" y2="206"/>
+    <line x1="120" y1="306" x2="392" y2="306"/>
+  </g>
+
+  <path transform="translate(106,106) scale(12.5)" d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.69 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" fill="none" stroke="url(#ca-cloud-stroke)" stroke-width="2.6" vector-effect="non-scaling-stroke"/>
+
+  <g stroke="#2DD4BF" stroke-opacity="0.75" stroke-width="2.6" stroke-linecap="round">
+    <line x1="60" y1="256" x2="452" y2="256"/>
+    <line x1="256" y1="60" x2="256" y2="452"/>
+    <line x1="100" y1="246" x2="100" y2="266"/>
+    <line x1="412" y1="246" x2="412" y2="266"/>
+    <line x1="246" y1="100" x2="266" y2="100"/>
+    <line x1="246" y1="412" x2="266" y2="412"/>
+  </g>
+
+  <g fill="#2DD4BF">
+    <circle cx="60" cy="256" r="6.5"/>
+    <circle cx="452" cy="256" r="6.5"/>
+    <circle cx="256" cy="60" r="6.5"/>
+    <circle cx="256" cy="452" r="6.5"/>
+  </g>
+
+  <circle cx="256" cy="256" r="34" fill="url(#ca-node-glow)"/>
+  <circle cx="256" cy="256" r="15" fill="none" stroke="#2DD4BF" stroke-width="3"/>
+  <circle cx="256" cy="256" r="6.5" fill="#5EEAD4"/>
+</svg>

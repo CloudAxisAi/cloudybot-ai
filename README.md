@@ -65,6 +65,7 @@ No local install. No Puppeteer setup. No Playwright config. It just works.
 - **[Architecture Overview](./docs/architecture.md)** — how it's built under the hood
 - **[FAQ](./docs/faq.md)** — common questions answered
 - **[Free Python Tools](./tools/)** — LinkedIn prompt builder, document chunker, task formatter
+- **[CloudAxis Launch Asset Kit](./launch-assets/cloudaxis/)** — logos (incl. animated), screenshots, OG images, demo videos, directory listing copy
 
 ---
 
@@ -96,6 +97,7 @@ No local install. No Puppeteer setup. No Playwright config. It just works.
 - [Use Cases](./docs/use-cases.md)
 - [FAQ](./docs/faq.md)
 - [Changelog](./CHANGELOG.md)
+- [CloudAxis launch assets](./launch-assets/cloudaxis/) — share this folder link for logos, screenshots, and videos
 
 ---
 

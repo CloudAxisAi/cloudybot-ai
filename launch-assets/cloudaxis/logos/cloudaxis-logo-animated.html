@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>CloudAxis — animated logo</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{width:100%;height:100%;background:#000}
+    body{display:flex;align-items:center;justify-content:center;min-height:100vh}
+    #stage{
+      position:relative;
+      width:var(--sz,512px);
+      height:var(--sz,512px);
+      background:radial-gradient(ellipse at 50% 52%,
+        #071E20 0%, #041416 38%, #030D0F 65%, #020A0C 100%);
+      overflow:hidden;
+    }
+    #stage canvas, #stage svg{position:absolute;inset:0;width:100%;height:100%}
+  </style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="bg"></canvas>
+  <svg id="logo" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="cf" x1="120" y1="150" x2="400" y2="360" gradientUnits="userSpaceOnUse">
+        <stop offset="0"  stop-color="#14B8A6" stop-opacity=".30"/>
+        <stop offset="1"  stop-color="#0D9488" stop-opacity=".15"/>
+      </linearGradient>
+      <linearGradient id="cs" x1="120" y1="150" x2="400" y2="360" gradientUnits="userSpaceOnUse">
+        <stop offset="0"  stop-color="#34D9C6"/>
+        <stop offset="1"  stop-color="#0EA58E"/>
+      </linearGradient>
+      <radialGradient id="cg" cx=".5" cy=".5" r=".5">
+        <stop offset="0"   stop-color="#FFFFFF" stop-opacity="1"/>
+        <stop offset=".18" stop-color="#CCFDF7" stop-opacity=".92"/>
+        <stop offset=".42" stop-color="#2DD4BF" stop-opacity=".58"/>
+        <stop offset=".72" stop-color="#0D9488" stop-opacity=".2"/>
+        <stop offset="1"   stop-color="#0D9488" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="halo" cx=".5" cy=".5" r=".5">
+        <stop offset="0"  stop-color="#2DD4BF" stop-opacity=".24"/>
+        <stop offset=".6" stop-color="#0D9488" stop-opacity=".07"/>
+        <stop offset="1"  stop-color="#0D9488" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="sh" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0"   stop-color="#5EEAD4" stop-opacity="0"/>
+        <stop offset=".35" stop-color="#99F6E4" stop-opacity=".82"/>
+        <stop offset=".5"  stop-color="#CCFDF7" stop-opacity="1"/>
+        <stop offset=".65" stop-color="#99F6E4" stop-opacity=".82"/>
+        <stop offset="1"   stop-color="#5EEAD4" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="sv" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0"   stop-color="#5EEAD4" stop-opacity="0"/>
+        <stop offset=".35" stop-color="#99F6E4" stop-opacity=".78"/>
+        <stop offset=".5"  stop-color="#CCFDF7" stop-opacity=".96"/>
+        <stop offset=".65" stop-color="#99F6E4" stop-opacity=".78"/>
+        <stop offset="1"   stop-color="#5EEAD4" stop-opacity="0"/>
+      </linearGradient>
+      <!-- Cloud clip path stays FIXED (not animated) -->
+      <clipPath id="cc">
+        <path transform="translate(106,106) scale(12.5)"
+          d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.69 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+      </clipPath>
+      <filter id="gf" x="-120%" y="-120%" width="340%" height="340%">
+        <feGaussianBlur stdDeviation="10" result="b1"/>
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="b2"/>
+        <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="rf" x="-25%" y="-25%" width="150%" height="150%">
+        <feGaussianBlur stdDeviation="4" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="df" x="-200%" y="-200%" width="500%" height="500%">
+        <feGaussianBlur stdDeviation="4" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+
+    <!--
+      Single wrapper group for the cloud + grid + rim.
+      JS animates ONLY this group's transform (breathe scale).
+      Everything else is absolutely positioned in 512×512 space.
+    -->
+    <g id="cloudGroup">
+      <!-- Cloud fill -->
+      <path transform="translate(106,106) scale(12.5)"
+        d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.69 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+        fill="url(#cf)"/>
+      <!-- Inner grid (clipped to cloud shape) -->
+      <g clip-path="url(#cc)">
+        <g id="grid" stroke="#2DD4BF" stroke-opacity=".34" stroke-width="1.5">
+          <line x1="181" y1="120" x2="181" y2="392"/>
+          <line x1="331" y1="120" x2="331" y2="392"/>
+          <line x1="120" y1="206" x2="392" y2="206"/>
+          <line x1="120" y1="306" x2="392" y2="306"/>
+        </g>
+        <rect id="scanH" x="118" y="117" width="276" height="3.5" fill="url(#sh)" opacity=".72"/>
+        <rect id="scanV" x="117" y="118" width="3.5" height="276" fill="url(#sv)" opacity=".68"/>
+      </g>
+      <!-- Cloud rim -->
+      <path transform="translate(106,106) scale(12.5)"
+        d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.69 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+        fill="none" stroke="url(#cs)" stroke-width="2.8"
+        vector-effect="non-scaling-stroke" filter="url(#rf)" id="rim"/>
+    </g>
+
+    <!-- Axes (separate group, same breathe transform applied by JS) -->
+    <g id="axesGroup">
+      <line x1="60"  y1="256" x2="452" y2="256" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-opacity=".82"/>
+      <line x1="256" y1="60"  x2="256" y2="452" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-opacity=".82"/>
+      <line x1="100" y1="247" x2="100" y2="265" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-opacity=".75"/>
+      <line x1="412" y1="247" x2="412" y2="265" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-opacity=".75"/>
+      <line x1="247" y1="100" x2="265" y2="100" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-opacity=".75"/>
+      <line x1="247" y1="412" x2="265" y2="412" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-opacity=".75"/>
+    </g>
+
+    <!-- Orbit rings -->
+    <circle id="orbit1" cx="256" cy="256" r="52"
+      fill="none" stroke="#2DD4BF" stroke-width="1.1"
+      stroke-dasharray="7 5" stroke-opacity=".38"/>
+    <circle id="orbit2" cx="256" cy="256" r="70"
+      fill="none" stroke="#0D9488" stroke-width="0.8"
+      stroke-dasharray="4 9" stroke-opacity=".22"/>
+
+    <!-- Wide halo -->
+    <circle id="haloEl" cx="256" cy="256" r="72" fill="url(#halo)"/>
+    <!-- Core glow -->
+    <circle id="glowEl" cx="256" cy="256" r="36" fill="url(#cg)" filter="url(#gf)"/>
+    <!-- Inner ring -->
+    <circle id="innerRing" cx="256" cy="256" r="15"
+      fill="none" stroke="#5EEAD4" stroke-width="2.8" opacity=".88"/>
+    <!-- Center dot -->
+    <circle id="coreEl" cx="256" cy="256" r="6" fill="#FFFFFF"/>
+
+    <!-- Endpoint dots with glow -->
+    <g filter="url(#df)">
+      <circle id="dL" cx="60"  cy="256" r="6.5" fill="#2DD4BF"/>
+      <circle id="dR" cx="452" cy="256" r="6.5" fill="#2DD4BF"/>
+      <circle id="dT" cx="256" cy="60"  r="6.5" fill="#2DD4BF"/>
+      <circle id="dB" cx="256" cy="452" r="6.5" fill="#2DD4BF"/>
+    </g>
+  </svg>
+</div>
+
+<script>
+(function(){
+  var p  = new URLSearchParams(location.search);
+  var SZ = Math.max(60, parseInt(p.get('size')||'512',10));
+  var el = document.getElementById('stage');
+  el.style.setProperty('--sz', SZ+'px');
+
+  /* ── Canvas setup ── */
+  var canvas = document.getElementById('bg');
+  var ctx    = canvas.getContext('2d');
+  var DPR    = Math.min(window.devicePixelRatio||1, 2);
+  canvas.width  = SZ*DPR; canvas.height = SZ*DPR;
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+
+  var CX=SZ/2, CY=SZ/2;
+
+  /* ── Precomputed OS dot-grid ── */
+  var STEP = SZ/13;
+  var gridC = document.createElement('canvas');
+  gridC.width=SZ; gridC.height=SZ;
+  var gc = gridC.getContext('2d');
+  gc.fillStyle='rgba(45,212,191,0.07)';
+  for(var gx=STEP*.5; gx<SZ; gx+=STEP)
+    for(var gy=STEP*.5; gy<SZ; gy+=STEP){
+      gc.beginPath(); gc.arc(gx,gy,.85,0,Math.PI*2); gc.fill();
+    }
+
+  /* ── Floating particles ── */
+  var parts = Array.from({length:34},function(){
+    var a=Math.random()*Math.PI*2, d=.12+Math.random()*.45;
+    return{x:CX+Math.cos(a)*d*CX, y:CY+Math.sin(a)*d*CY,
+           r:.5+Math.random()*1.7, vx:(Math.random()-.5)*.13,
+           vy:(Math.random()-.5)*.13, a:.1+Math.random()*.42,
+           ph:Math.random()*Math.PI*2, sp:.7+Math.random()*1.5};
+  });
+
+  /* ── Aurora bands ── */
+  var auroras=[
+    {x:.30,y:.26,rx:.42,ry:.17,rot:0,       spd: .0038,a:.042,col:[13,148,136]},
+    {x:.72,y:.74,rx:.40,ry:.16,rot:1.9,     spd:-.003, a:.035,col:[20,184,166]},
+    {x:.50,y:.50,rx:.58,ry:.13,rot:.5,      spd: .002, a:.028,col:[45,212,191]},
+  ];
+
+  /* ── Data packets (comets with tails) ── */
+  var axesDef=[
+    {x0:SZ*.117,y0:CY,    x1:CX,  y1:CY},
+    {x0:SZ*.883,y0:CY,    x1:CX,  y1:CY},
+    {x0:CX,     y0:SZ*.117,x1:CX, y1:CY},
+    {x0:CX,     y0:SZ*.883,x1:CX, y1:CY},
+    {x0:SZ*.117,y0:CY,    x1:CX,  y1:CY},
+    {x0:CX,     y0:SZ*.117,x1:CX, y1:CY},
+    {x0:SZ*.883,y0:CY,    x1:CX,  y1:CY},
+    {x0:CX,     y0:SZ*.883,x1:CX, y1:CY},
+  ];
+  var packets=axesDef.map(function(ax,i){
+    return{ax:ax, t:i/axesDef.length,
+           spd:.0025+Math.random()*.003,
+           r:1.7+Math.random()*1.6,
+           br:.55+Math.random()*.45};
+  });
+
+  /* ── Dot positions ── */
+  var DOTS={dL:{x:60,y:256},dR:{x:452,y:256},dT:{x:256,y:60},dB:{x:256,y:452}};
+
+  function lerp(a,b,t){return a+(b-a)*t}
+  function eio(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+  function rga(r,g,b,a){return 'rgba('+r+','+g+','+b+','+a.toFixed(3)+')'}
+  function sa(id,attr,val){var e=document.getElementById(id);if(e)e.setAttribute(attr,val)}
+  function breathTx(s){
+    return 'translate(256 256) scale('+s.toFixed(5)+') translate(-256 -256)';
+  }
+
+  var t0=performance.now();
+
+  function frame(now){
+    var e=(now-t0)/1000;
+    var T4=(e%4)/4;
+    /* shift +2s → first frame = peak brightness */
+    var br=eio(Math.abs(Math.sin((e+2)*Math.PI/4)));
+
+    ctx.clearRect(0,0,SZ,SZ);
+    ctx.drawImage(gridC,0,0,SZ,SZ);
+
+    /* aurora */
+    auroras.forEach(function(au){
+      au.rot+=au.spd;
+      ctx.save();
+      ctx.translate(au.x*SZ,au.y*SZ);
+      ctx.rotate(au.rot);
+      var gr=ctx.createRadialGradient(0,0,0,0,0,au.rx*SZ);
+      var aa=au.a*(0.65+0.35*br);
+      gr.addColorStop(0,rga(au.col[0],au.col[1],au.col[2],aa));
+      gr.addColorStop(1,rga(au.col[0],au.col[1],au.col[2],0));
+      ctx.scale(1,au.ry/au.rx);
+      ctx.beginPath(); ctx.arc(0,0,au.rx*SZ,0,Math.PI*2);
+      ctx.fillStyle=gr; ctx.fill();
+      ctx.restore();
+    });
+
+    /* particles */
+    parts.forEach(function(pt){
+      pt.x+=pt.vx; pt.y+=pt.vy;
+      if(pt.x<-4)pt.x=SZ+4; if(pt.x>SZ+4)pt.x=-4;
+      if(pt.y<-4)pt.y=SZ+4; if(pt.y>SZ+4)pt.y=-4;
+      var fl=.45+.55*Math.sin(e*pt.sp+pt.ph);
+      var a=pt.a*fl;
+      var gr=ctx.createRadialGradient(pt.x,pt.y,0,pt.x,pt.y,pt.r*3.2);
+      gr.addColorStop(0,rga(94,234,212,a));
+      gr.addColorStop(1,rga(94,234,212,0));
+      ctx.beginPath(); ctx.arc(pt.x,pt.y,pt.r*3.2,0,Math.PI*2);
+      ctx.fillStyle=gr; ctx.fill();
+      ctx.beginPath(); ctx.arc(pt.x,pt.y,pt.r*.65,0,Math.PI*2);
+      ctx.fillStyle=rga(200,255,248,a*.9);
+      ctx.fill();
+    });
+
+    /* data packets with comet tails */
+    packets.forEach(function(pk){
+      pk.t=(pk.t+pk.spd)%1;
+      var ax=pk.ax;
+      var px=lerp(ax.x0,ax.x1,pk.t), py=lerp(ax.y0,ax.y1,pk.t);
+      var fade=pk.t<.12?pk.t/.12:pk.t>.82?(1-pk.t)/.18:1;
+      /* tail */
+      for(var k=1;k<=7;k++){
+        var tt=Math.max(0,pk.t-k*.055);
+        var tx=lerp(ax.x0,ax.x1,tt), ty=lerp(ax.y0,ax.y1,tt);
+        var ta=fade*pk.br*(0.26-k*.033);
+        if(ta>0.01){
+          ctx.beginPath(); ctx.arc(tx,ty,pk.r*(1-k/7)*1.3,0,Math.PI*2);
+          ctx.fillStyle=rga(94,234,212,ta); ctx.fill();
+        }
+      }
+      /* glow */
+      var gr=ctx.createRadialGradient(px,py,0,px,py,pk.r*5.5);
+      gr.addColorStop(0,rga(99,250,220,pk.br*fade*.65));
+      gr.addColorStop(1,rga(13,148,136,0));
+      ctx.beginPath(); ctx.arc(px,py,pk.r*5.5,0,Math.PI*2);
+      ctx.fillStyle=gr; ctx.fill();
+      /* bright dot */
+      ctx.beginPath(); ctx.arc(px,py,pk.r,0,Math.PI*2);
+      ctx.fillStyle=rga(255,255,255,pk.br*fade);
+      ctx.fill();
+    });
+
+    /* ── SVG animation ── */
+    var sc=1+.022*br;
+
+    /* cloud group + axes: single transform each */
+    sa('cloudGroup','transform',breathTx(sc));
+    sa('axesGroup',  'transform',breathTx(sc));
+
+    /* scan lines sweep inside cloud */
+    var sy=118+(T4%1)*276;
+    var sx=118+(((T4+.5)%1))*276;
+    sa('scanH','y',(sy-1.75).toFixed(2));
+    sa('scanV','x',(sx-1.75).toFixed(2));
+
+    /* rim pulse */
+    sa('rim','opacity',(.72+.28*br).toFixed(3));
+    sa('grid','opacity',(.78+.22*br).toFixed(3));
+
+    /* orbit rings */
+    sa('orbit1','transform','rotate('+(e*15).toFixed(2)+',256,256)');
+    sa('orbit2','transform','rotate('+(-e*9).toFixed(2)+',256,256)');
+    sa('orbit1','stroke-opacity',(.28+.18*br).toFixed(3));
+    sa('orbit2','stroke-opacity',(.16+.12*br).toFixed(3));
+
+    /* endpoint dots staggered pulse */
+    ['dL','dR','dT','dB'].forEach(function(id,i){
+      var ph=((T4+i*.25)%1);
+      var dsc=1+.38*Math.sin(ph*Math.PI*2);
+      var dop=(.65+.35*Math.sin(ph*Math.PI*2)).toFixed(3);
+      var d=DOTS[id];
+      sa(id,'transform',
+        'translate('+d.x+','+d.y+') scale('+dsc.toFixed(4)+') translate('+-d.x+','+-d.y+')');
+      sa(id,'opacity',dop);
+    });
+
+    /* core glow */
+    sa('glowEl','transform',breathTx(.88+.24*br));
+    sa('glowEl','opacity',(.5+.5*br).toFixed(3));
+    sa('haloEl','opacity',(.36+.64*br).toFixed(3));
+    sa('coreEl','opacity',(.78+.22*br).toFixed(3));
+    sa('innerRing','opacity',(.7+.3*br).toFixed(3));
+    sa('axesGroup','opacity',(.65+.35*br).toFixed(3));
+
+    requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
