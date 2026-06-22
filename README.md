@@ -3,6 +3,7 @@
 > Assign tasks in plain English. CloudyBot handles the browser, the research, the outreach — you just get results.
 
 [![Live Product](https://img.shields.io/badge/Live-cloudybot.ai-blue)](https://cloudybot.ai)
+[![Parent brand](https://img.shields.io/badge/Parent-CloudAxis-6366f1)](https://cloudaxis.ai)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen)]()
 [![Pricing](https://img.shields.io/badge/Pricing-Hard--capped-orange)]()
 
@@ -26,6 +27,12 @@ No installs. No API keys. No config files. No surprise bills.
 | **Knowledge Base** | Upload PDFs, docs, or paste content. Ask questions and get accurate answers from your own data. |
 | **Web Research** | "Find me the top 10 SaaS tools for X" — CloudyBot browses and summarises. |
 | **Hard-capped Pricing** | Set a monthly cap. It never exceeds it. No bill shock. |
+
+---
+
+## Parent brand: CloudAxis
+
+CloudyBot is a product line from **[CloudAxis Labs](https://cloudaxis.ai)** — the Agentic Cloud OS (persistent cloud desktop, real browser, scheduled specialists). Launch the OS at [app.cloudaxis.ai](https://app.cloudaxis.ai). Category deep dives live on [cloudaxis.ai/blog/](https://cloudaxis.ai/blog/).
 
 ---
 
@@ -65,7 +72,8 @@ No local install. No Puppeteer setup. No Playwright config. It just works.
 - **[Architecture Overview](./docs/architecture.md)** — how it's built under the hood
 - **[FAQ](./docs/faq.md)** — common questions answered
 - **[Free Python Tools](./tools/)** — LinkedIn prompt builder, document chunker, task formatter
-- **[CloudAxis Launch Asset Kit](./launch-assets/cloudaxis/)** — logos (incl. animated), screenshots, OG images, demo videos, directory listing copy
+- **[CloudAxis Launch Asset Kit](./launch-assets/cloudaxis/)** — logos, screenshots, OG images, demo videos, directory listing copy
+- **[CloudAxis Hunter Pack](./launch-assets/cloudaxis/HUNTER-PACK.md)** — **launch teaser for Product Hunt** ([YouTube](https://youtu.be/X80a_OZMiaQ) · [MP4](https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/video/LaunchTeaser-1080p.mp4))
 
 ---
 
@@ -98,6 +106,7 @@ No local install. No Puppeteer setup. No Playwright config. It just works.
 - [FAQ](./docs/faq.md)
 - [Changelog](./CHANGELOG.md)
 - [CloudAxis launch assets](./launch-assets/cloudaxis/) — share this folder link for logos, screenshots, and videos
+- [CloudAxis hunter pack](./launch-assets/cloudaxis/HUNTER-PACK.md) — launch teaser + PH gallery links for hunters
 
 ---
 

@@ -67,10 +67,24 @@
 
 ---
 
+## Launch teaser (`video/LaunchTeaser*`)
+
+| File | Use |
+|------|-----|
+| `LaunchTeaser-1080p.mp4` | **PH gallery / hunter** — 60s product overview |
+| `LaunchTeaser-720p.mp4` | Smaller download |
+| `LaunchTeaser-poster.png` | Thumbnail / social |
+| YouTube | https://youtu.be/X80a_OZMiaQ |
+
+**Hunter one-pager:** [`HUNTER-PACK.md`](./HUNTER-PACK.md) — send Rohan this file or the YouTube + raw MP4 links above.
+
+---
+
 ## Video demos (`video/`)
 
 | File | ~Duration | Content |
 |------|-----------|---------|
+| `LaunchTeaser-1080p.mp4` | 60 sec | **Launch teaser** — full product story (primary PH video) |
 | `05-full-desktop-walkthrough-3min.webm` | 3–5 min | Desktop → Launchpad → all apps |
 | `02-browser-automation-90s.webm` | 90 sec | Connect browser, live session |
 | `03-file-persistence-60s.webm` | 60 sec | Files app, close/reopen |
@@ -116,9 +130,12 @@ Regenerate: `cd api && node scripts/generate-cloudaxis-launch-assets.mjs`
 
 ## Hunter one-pager (send this week)
 
+- **Pack:** [`HUNTER-PACK.md`](./HUNTER-PACK.md) — teaser video links, gallery order, copy
+- **Launch teaser YouTube:** https://youtu.be/X80a_OZMiaQ
+- **Launch teaser MP4 (1080p):** https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/video/LaunchTeaser-1080p.mp4
 - **URL:** https://app.cloudaxis.ai (offer beta Pro access)
 - **Positioning:** Isolated cloud computer for AI agents — not a chatbot
-- **3 demos:** (1) agent task board, (2) cloud browser + VPN, (3) multi-agent workflow
+- **3 demos:** (1) launch teaser 60s, (2) cloud browser + VPN, (3) multi-agent workflow
 - **Copy:** `copy/LISTING-COPY.md`
 - **Assets:** this folder + PH gallery order above
 

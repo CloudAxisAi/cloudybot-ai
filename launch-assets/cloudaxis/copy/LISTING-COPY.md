@@ -103,6 +103,16 @@ agent OS, AI agents, cloud browser, browser automation, multi-agent workflow, pe
 
 ---
 
+## Launch teaser video
+
+| Asset | URL |
+|-------|-----|
+| YouTube | https://youtu.be/X80a_OZMiaQ |
+| MP4 (1080p, GitHub) | https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/video/LaunchTeaser-1080p.mp4 |
+| Hunter pack | https://github.com/CloudAxisAi/cloudybot-ai/blob/main/launch-assets/cloudaxis/HUNTER-PACK.md |
+
+---
+
 ## Maker comment draft (Product Hunt — edit before posting)
 
 Hey PH — I'm Jithu, founder of CloudAxis.
