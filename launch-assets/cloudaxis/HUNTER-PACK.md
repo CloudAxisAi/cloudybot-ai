@@ -44,18 +44,23 @@ Full listing copy: [`copy/LISTING-COPY.md`](./copy/LISTING-COPY.md)
 
 ---
 
-## PH gallery order (screenshots)
+## PH gallery (1270×760 — ready to upload)
 
-1. `og/ph-hero-1200x630.png`
-2. `screenshots-v2/18-marketing-hero.png`
-3. `screenshots-v2/01-desktop-home.png`
-4. `screenshots-v2/03-agents-board-full.png`
-5. `screenshots-v2/19-marketing-comparison.png`
-6. `screenshots-v2/05-workflows-pipeline.png`
-7. `screenshots-v2/09-browser-session.png`
-8. `screenshots-v2/14-settings-vpn-residential.png`
+**Folder:** https://github.com/CloudAxisAi/cloudybot-ai/tree/main/launch-assets/cloudaxis/ph-gallery
 
-Browse: https://github.com/CloudAxisAi/cloudybot-ai/tree/main/launch-assets/cloudaxis/screenshots-v2
+| # | File | Raw download |
+|---|------|--------------|
+| 01 | `01-home.png` | https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/ph-gallery/01-home.png |
+| 02 | `02-app-home.png` | https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/ph-gallery/02-app-home.png |
+| 02 | `02-app-home.gif` (optional) | https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/ph-gallery/02-app-home.gif |
+| 03 | `03-cloudia.png` | https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/ph-gallery/03-cloudia.png |
+| 04 | `04-agents.png` | https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/ph-gallery/04-agents.png |
+| 05 | `05-browser.png` | https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/ph-gallery/05-browser.png |
+| 06 | `06-files.png` | https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/ph-gallery/06-files.png |
+| 07 | `07-workflows.png` | https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/ph-gallery/07-workflows.png |
+| 08 | `08-comparison.png` | https://github.com/CloudAxisAi/cloudybot-ai/raw/main/launch-assets/cloudaxis/ph-gallery/08-comparison.png |
+
+Legacy full-res sources: https://github.com/CloudAxisAi/cloudybot-ai/tree/main/launch-assets/cloudaxis/screenshots-v2
 
 ---
 
